@@ -1,0 +1,23 @@
+package com.coforge;
+ 
+public class Circle implements Shape{
+	private double radius;
+	
+	public Circle(double radius) {
+		super();
+		this.radius = radius;
+	}
+	public Circle() {
+		super();
+	}
+	@Override
+	public void area() {
+		System.out.println(3.14*radius*radius);
+	}
+	@Override
+	public void circumference() {
+		System.out.println(2*3.14*radius);
+	}
+}
+ 
+ 
