@@ -1,54 +1,80 @@
 package com.coforge;
  
 import java.io.IOException;
+
 import java.io.PrintWriter;
  
 import jakarta.servlet.ServletException;
+
 import jakarta.servlet.annotation.WebServlet;
+
 import jakarta.servlet.http.HttpServlet;
+
 import jakarta.servlet.http.HttpServletRequest;
+
 import jakarta.servlet.http.HttpServletResponse;
  
  
 /**
-* Servlet implementation class First
+
+* Servlet implementation class FirstServlet
+
 */
-@WebServlet("/First")
+
+@WebServlet("/Servlet")
+
 public class Servlet extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
  
     /**
-     * Default constructor.
+
+     * Default constructor. 
+
      */
+
     public Servlet() {
+
         // TODO Auto-generated constructor stub
+
     }
  
 	/**
+
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+
 	 */
-	protected void doGet(jakarta.servlet.http.HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		PrintWriter out=response.getWriter();
-		String uname=request.getParameter("uname");
-		String pwd=request.getParameter("pwd");
-		out.println("welcome "+uname);
-		out.close();
-		if(uname.equals("swapna")&& pwd.equals("swapna@123"))
-			out.println("Welcome "+uname);
-		else
-			out.println("<h3> Invalid credentials</h3>");
-	
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	     PrintWriter out=response.getWriter();
+
+	     out.println("<body bgcolor= cyan>");
+
+	     out.println("<h1 style=color:red>Hello Servlet............</h1>.");
+
+	     out.print("</body>");
+
+	     out.close();
+
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+
 	}
  
 	/**
+
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+
 	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		// TODO Auto-generated method stub
+
 		doGet(request, response);
+
 	}
  
 }
- 
+
  
