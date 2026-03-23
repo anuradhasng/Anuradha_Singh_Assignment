@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+
+
+    <bean id="address" class="com.coforge.beans.Address">
+        <constructor-arg value="12-45"/>
+        <constructor-arg value="GD Road"/>
+        <constructor-arg value="Kanpur"/>
+        <constructor-arg value="UP"/>
+        <constructor-arg value="209305"/>
+    </bean>
+
+    <!-- autowire by name -->
+    <bean id="customerByName"
+          class="com.coforge.beans.Customer"
+          autowire="byName">
+        <property name="cname" value="Ritika"/>
+        <property name="cid" value="201"/>
+        <property name="mobile" value="9999999999"/>
+        <property name="email" value="ritika@gmail.com"/>
+    </bean>
+
+    <!-- autowire by type -->
+    <bean id="customerByType"
+          class="com.coforge.beans.Customer"
+          autowire="byType">
+        <property name="cname" value="Suman"/>
+        <property name="cid" value="202"/>
+        <property name="mobile" value="8888888888"/>
+        <property name="email" value="suman@gmail.com"/>
+    </bean>
+
+    <!-- autowire by constructor -->
+    <bean id="customerByConstructor"
+          class="com.coforge.beans.Customer"
+          autowire="constructor">
+        <constructor-arg value="Amit"/>
+        <constructor-arg value="203"/>
+        <constructor-arg ref="address"/>
+        <constructor-arg value="7777777777"/>
+        <constructor-arg value="amit@gmail.com"/>
+    </bean>
+
+</beans>
+

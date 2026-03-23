@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    
+
+    <bean id="cust" class="com.coforge.beans.Customer">
+        <constructor-arg value="Anuradha"/>
+        <constructor-arg value="101"/>
+        <constructor-arg>
+            <bean class="com.coforge.beans.Address">
+                <constructor-arg value="10-22"/>
+                <constructor-arg value="UCO Lane"/>
+                <constructor-arg value="Hyderabad"/>
+                <constructor-arg value="Telangana"/>
+                <constructor-arg value="500032"/>
+            </bean>
+        </constructor-arg>
+        <constructor-arg value="9876543210"/>
+        <constructor-arg value="anu@gmail.com"/>
+    </bean>
+
+</beans>
+
