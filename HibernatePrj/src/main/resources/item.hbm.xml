@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+   "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+   "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">  
+  
+<hibernate-mapping>
+<class name="com.coforge.entities.Item" table="item">
+<id name="id" column="id" type="long"></id>
+<property name="name" column="name" type="string"></property>
+<property name="cost" column="cost" type="double"></property>
+</class>
+   </hibernate-mapping>
+ 
+ 
